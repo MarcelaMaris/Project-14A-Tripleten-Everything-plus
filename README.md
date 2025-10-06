@@ -1,6 +1,6 @@
 # 🛒 Everything Plus – Customer Segmentation & Churn Analysis
 
-This project analyzes transaction data from **Everything Plus**, an online store for household items.  
+This project uses transactional data from Everything Plus to identify behavioral patterns, segment customers, and predict churn risk — enabling data-driven retention strategies and targeted marketing actions.
 Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing behavior, builds **K-Means** customer segments, tests hypotheses, and trains a **predictive churn model**.
 
 🔗 **Live dashboard:** https://public.tableau.com/app/profile/marcela.stephanie.pereira.maris1628/viz/DashboarddeAnlisedeClientes/Dashboard1  
@@ -35,26 +35,52 @@ Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing 
 ---
 
 ## 📌 Conclusions
-- Most customers have **low frequency** (median = 2 orders) and **moderate average ticket**.  
-- **Top-selling items** by volume are not always the **top-revenue** items.  
-- **Three segments** (k=3) emerged:  
-  - A large “standard” group (low frequency, moderate ticket).  
-  - A very small **high-ticket** group (few orders, very high average order value).  
-  - A **high-frequency** group (many orders, lower per-order value).  
-- Churn models reached **very high metrics** (near 1.00). This may indicate **overfitting or data leakage** and is flagged as a limitation for future work.
+- Most customers have **low purchase frequency** (median = 2) and **moderate average ticket**, indicating a predominantly occasional buyer base.
+- **Volume leaders ≠ Revenue leaders**: the top-selling items by units were not always the ones generating the most revenue, highlighting cross-selling and pricing opportunities.
+- Customer segmentation (K=3) revealed three clear profiles:
+  - 🟦 **Standard group** (majority): low frequency, moderate ticket — stable but not high-value.
+  - 🟥 **High-ticket group**: very small, few orders but extremely high AOV — potentially corporate buyers or outliers.
+  - 🟩 **High-frequency group**: loyal and frequent buyers with lower AOV — ideal for loyalty or upselling campaigns.
+- Predictive churn models achieved **exceptionally high performance (F1 ≈ 1.00)**. While this shows strong patterns in the data, it also raises concerns about **potential overfitting or data leakage**, especially around churn definition.
+- **Behavior alone wasn’t strongly correlated with churn** in hypothesis tests, but machine learning captured complex combinations of features that were predictive.
 
 ---
 
 ## 📝 Recommendations
-- **Retention campaigns** targeted by segment (e.g., perks for high-frequency, cross-sell for standard group).  
-- **Early-warning monitoring** of customers with many days since last purchase.  
-- Revisit the **churn definition** (>90 days) and apply **time-based validation** to avoid leakage.  
-- Add features (seasonality, product mix, channel) and try **cross-validation / hyperparameter tuning**.
+- **Targeted retention campaigns per segment**  
+  - 🟩 High-frequency: loyalty perks, subscription offers, early access.  
+  - 🟦 Standard: cross-selling and personalized recommendations.  
+  - 🟥 High-ticket: dedicated account management and premium services.
+  
+- **Early churn warning system**  
+  Monitor “days since last purchase” continuously and trigger proactive re-engagement actions for at-risk customers.
+
+- **Refine churn definition and validation**  
+  Use rolling windows or survival analysis to define inactivity more robustly, and adopt **time-based validation** to avoid data leakage.
+
+- **Feature engineering**  
+  Enrich the model with seasonality, product mix, acquisition channel, or region to improve accuracy and generalization.
+
+- **Model monitoring and retraining**  
+  Reassess churn models periodically as customer behavior and business strategy evolve.
+
+- **Experimentation layer**  
+  Test retention actions on at-risk segments and measure uplift, closing the loop between prediction and marketing effectiveness.
+
+
+---
+## 💡 Key Business Impact
+- Identified distinct customer segments for **personalized marketing**.  
+- Built a churn prediction model to **prioritize retention efforts**.  
+- Highlighted strategic opportunities in product mix and pricing.  
+- Delivered insights through a **Tableau dashboard** for easy business adoption.
+
 
 ---
 
-## 🛠️ Technologies Used
-- **Python**, **Pandas**, **NumPy**, **Matplotlib**, **Seaborn**  
-- **scikit-learn**, **Statsmodels**, **SciPy**  
-- **Jupyter Notebook** for analysis  
-- **Tableau** for the interactive dashboard
+## 🛠️ Tech Stack
+- **Data Analysis**: Python, Pandas, NumPy, Matplotlib, Seaborn  
+- **Statistical Testing**: Statsmodels, SciPy  
+- **Machine Learning**: scikit-learn (K-Means, Logistic Regression, Random Forest)  
+- **Visualization**: Tableau, Jupyter Notebook
+
