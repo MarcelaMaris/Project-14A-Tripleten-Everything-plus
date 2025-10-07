@@ -1,7 +1,15 @@
-# 🛒 Everything Plus – Customer Segmentation & Churn Analysis
+# 🛒 Everything Plus — Customer Segmentation & Churn Analysis
 
-This project uses transactional data from Everything Plus to identify behavioral patterns, segment customers, and predict churn risk — enabling data-driven retention strategies and targeted marketing actions.
-Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing behavior, builds **K-Means** customer segments, tests hypotheses, and trains a **predictive churn model**.
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Tableau](https://img.shields.io/badge/Tableau-Dashboard-orange)
+![Machine Learning](https://img.shields.io/badge/ML-KMeans%20%7C%20LogReg%20%7C%20RandomForest-green)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## 📌 Project Overview
+This project was developed as part of the **Data Analytics Bootcamp at [TripleTen](https://tripleten.com)**.  
+Using **transactional data** from a fictional retailer, Everything Plus, the project identifies **behavioral patterns**, segments customers, and predicts **churn risk** to support data-driven retention strategies and targeted marketing actions.
+
+The analysis was conducted in **Jupyter Notebooks** and summarized in an **interactive Tableau dashboard**, combining **EDA**, **K-Means clustering**, hypothesis testing, and predictive modeling.
 
 🔗 **Live dashboard:** https://public.tableau.com/app/profile/marcela.stephanie.pereira.maris1628/viz/DashboarddeAnlisedeClientes/Dashboard1  
 💻 **Repository:** https://github.com/MarcelaMaris/Project-14A-Tripleten-Everything-Plus
@@ -75,5 +83,6 @@ Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing 
 - **Statistical Testing**: Statsmodels, SciPy  
 - **Machine Learning**: scikit-learn (K-Means, Logistic Regression, Random Forest)  
 - **Visualization**: Tableau, Jupyter Notebook
+
 
 
