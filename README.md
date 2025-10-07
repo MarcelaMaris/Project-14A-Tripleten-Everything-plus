@@ -18,19 +18,11 @@ Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing 
 
 ---
 
-## 🧭 Dashboard Features
-- **📈 Cluster overview**  
-  Bar chart with the number of customers per cluster.
+  ## 🧭 Dashboard Features
+- 📈 **Cluster overview** – Bar chart showing the number of customers per cluster.  
+- 🫧 **Frequency × Ticket bubble chart** – Scatterplot illustrating customer segmentation based on purchase frequency and average ticket.  
+- 📦 **Spend distribution** – Histogram showing the distribution of total customer spend.  
 
-- **🫧 Frequency × Ticket bubble chart**  
-  Each point is a customer; bubble size reflects **total spend**.  
-  **Slider** for “days since last purchase” highlights potential churn risk.
-
-- **📦 Spend distribution**  
-  Histogram of total customer spend (binned), showing concentration at lower values.
-
-- **🔍 Interactivity**  
-  Filter by cluster and explore outliers (very high ticket / very high frequency).
 
 ---
 
@@ -83,4 +75,5 @@ Using **Jupyter notebooks** and a **Tableau dashboard**, it explores purchasing 
 - **Statistical Testing**: Statsmodels, SciPy  
 - **Machine Learning**: scikit-learn (K-Means, Logistic Regression, Random Forest)  
 - **Visualization**: Tableau, Jupyter Notebook
+
 
